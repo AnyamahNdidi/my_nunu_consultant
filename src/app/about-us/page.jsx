@@ -213,7 +213,7 @@ const Section2 = ({scrollYProgress}) => {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <p className="text-gray-400 text-lg">
-            Ready to transform your AI startup's go-to-market strategy?
+            Ready to transform your AI startup&apos;s go-to-market strategy?
           </p>
         </motion.div>
       </div>
