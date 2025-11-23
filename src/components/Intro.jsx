@@ -101,7 +101,7 @@ export default function Intro() {
               </span> Startups
             </h1>
             <p className='text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto'>
-            "We shape your positioning, craft your story, and build GTM strategies that win customers, fast"
+            &ldquo;We shape your positioning, craft your story, and build GTM strategies that win customers, fast&rdquo;
             </p>
             <button className='bg-[#00FF94] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors'>
               Book a Consultation

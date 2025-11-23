@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import styles from './style.module.scss';
 import { motion, useMotionValue, useSpring, transform, animate } from 'framer-motion';
 
-export default function index({stickyElement}) {
+export default function StickyCursor({stickyElement}) {
 
   const [isHovered, setIsHovered] = useState(false);
   const cursor = useRef(null);
@@ -88,7 +88,7 @@ export default function index({stickyElement}) {
       }
       window.removeEventListener("mousemove", manageMouseMove);
     };
-  }, [isHovered, stickyElement]);
+  }, [isHovered, stickyElement, manageMouseMove, manageMouseOver]);
 
   const template = ({rotate, scaleX, scaleY}) => {
     return `rotate(${rotate}) scaleX(${scaleX}) scaleY(${scaleY})` 
