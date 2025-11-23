@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import Intro from "@/components/Intro";
 import Description from "@/components/Description";
+
 import Section from "@/components/Section";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";

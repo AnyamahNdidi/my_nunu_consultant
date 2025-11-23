@@ -39,7 +39,7 @@ const Section1 = ({scrollYProgress}) => {
           <div className="absolute inset-0">
           {/* Team photo - extends to full right side */}
           <div className="absolute right-0 top-0 w-2/3 h-full">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/data-center-admin-looking-maintenance-files-monitoring-system-performance.jpg-up6KRYL4lWTII3qgbkenfbIXGKVXbI.jpeg"
               alt="Team working in office"
               className="w-full h-full object-cover"
@@ -55,7 +55,7 @@ const Section1 = ({scrollYProgress}) => {
             <div className="max-w-3xl">
               {/* Main Headline */}
               <h1 className="text-white text-3xl sm:text-xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8">
-                We don't just market AI,{" "}
+                We don&apos;t just market AI,{" "}
                 <span className="italic">we make it matter.</span>
                 <br />
                 {/* <br /> */}
@@ -286,7 +286,7 @@ const Section3 = () => {
 
             {/* Quote */}
             <blockquote className="border-l-4 border-[#00FF94] pl-4 py-2 mb-6 italic text-[#B0B0B0]">
-              "Great technology becomes great products when the market understands the value."
+              Great technology becomes great products when the market understands the value.
             </blockquote>
 
             {/* LinkedIn Link */}
