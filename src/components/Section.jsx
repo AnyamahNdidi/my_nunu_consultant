@@ -3,6 +3,7 @@ import Background from '../../public/images/1.jpg';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { Star } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Section() {
     const container = useRef();
@@ -55,7 +56,7 @@ export default function Section() {
 
           {/* Center Content - Green Card - MUST HAVE z-10 */}
           <motion.div 
-            className='relative z-10 bg-[#00FF94] rounded-3xl px-16 py-14 text-center max-w-7xl w-full min-h-[700px] mx-6 flex flex-col items-center justify-center'
+            className='relative z-10 bg-[#00FF94] rounded-3xl px-16 py-14 text-center max-w-5xl w-full min-h-[700px] mx-6 flex flex-col items-center justify-center'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -110,19 +111,21 @@ export default function Section() {
               </div>
             </motion.div>
 
-            <motion.button 
-              className='bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors mb-4'
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Schedule A Free Demo
-            </motion.button>
+            <Link href="/contact">
+              <motion.button 
+                className='bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors mb-4'
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Book a Consultation
+              </motion.button>
+            </Link>
 
-            <motion.p 
+            {/* <motion.p 
               className='text-black/70 text-sm'
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -130,7 +133,7 @@ export default function Section() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               Or learn more about our <a href="#" className='text-black underline font-medium hover:no-underline'>consulting</a>.
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </div>
     )

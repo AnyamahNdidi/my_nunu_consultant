@@ -99,10 +99,10 @@ export default function Header() {
           {/* CTA Button - Desktop */}
           <div className="flex-1 flex justify-end items-center gap-4">
             <a 
-              href="/demo"
+              href="/contact"
               className="hidden md:block bg-[#00FF94] hover:bg-green-600 text-black font-semibold px-6 py-2 rounded-lg transition-colors"
             >
-              Free Demo
+              Book a Consultation
             </a>
             
             {/* Mobile Menu Button */}
@@ -133,11 +133,11 @@ export default function Header() {
           
           {/* Mobile CTA Button */}
           <a 
-            href="/demo"
+            href="/contact"
             className="block w-full mt-6 bg-[#00FF94] hover:bg-green-600 text-black font-semibold px-6 py-4 rounded-lg transition-colors text-center text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Free Demo
+            Book a Consultation
           </a>
         </nav>
       </div>

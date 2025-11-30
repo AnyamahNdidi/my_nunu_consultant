@@ -12,7 +12,8 @@ export default function Intro() {
       offset: ['start start', 'end start']
     })
   
-    const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"])
+    // determine the scroll distance for the container
+    const y = useTransform(scrollYProgress, [0, 1], ["0vh", "60vh"])
   
     // Individual icon scroll animations
     const icon1Y = useTransform(scrollYProgress, [0, 1], ["0vh", "120vh"])
@@ -61,8 +62,8 @@ export default function Intro() {
     ];
   
     return (
-      <div ref={container} className='h-[600px] overflow-hidden bg-[#00FF94]'>
-        <motion.div style={{y}} className='relative h-full bg-[#0A0A0A] flex items-center justify-center'>
+      <div ref={container} className='h-[600px] overflow-hidden bg-[#0A0A0A] '>
+        <motion.div style={{y}} className='relative h-full  bg-[#0A0A0A] flex items-center justify-center'>
           {/* Floating Icons with Mouse Tracking - Behind content */}
           <div className='absolute inset-0 z-0'>
             {icons.map(({ Icon, scrollY, className, size, speed, custom }, index) => (

@@ -10,9 +10,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
           {/* Logo & Company Info */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 ">
             {/* Logo */}
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center mb-4 -mt-6">
               <Logo color="#2D5A3D" width={120} height={90} />
             </div>
             <p className="text-gray-600 text-sm mb-6 leading-relaxed">
@@ -43,18 +43,18 @@ export default function Footer() {
           {/* Company Links */}
           <div>
             <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Company</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Home</a></li>
               <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">About</a></li>
               <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Contact</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Blog</a></li>
+              {/* <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Blog</a></li> */}
             </ul>
           </div>
 
           {/* Services Links */}
           <div>
             <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">GTM Services</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Market Research</a></li>
               <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></li>
               <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Pitch Deck & Messaging</a></li>
@@ -65,8 +65,8 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Contact us</h3>
-            <ul className="space-y-3">
-              <li><a href="mailto:hello@gtmlabs.co" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">hello@gtmlabs.co</a></li>
+            <ul className="space-y-2">
+              <li><a href="mailto:hello@gtmlabs.co" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">info@nunuconsulting.com</a></li>
               <li><a href="tel:+14155551234" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a></li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            Copyright 2025 © GTM Labs
+            Copyright 2025 © Nunu Consulting
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-500 text-sm hover:text-[#2D5A3D] transition-colors">Privacy Policy</a>
