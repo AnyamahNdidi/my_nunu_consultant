@@ -15,9 +15,7 @@ export default function Footer() {
             <div className="flex items-center mb-4 -mt-6">
               <Logo color="#2D5A3D" width={120} height={90} />
             </div>
-            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-              Empowering brands with creative marketing strategies, innovative campaigns, and data-driven insights to connect with audiences and drive growth.
-            </p>
+            {/* Removed tagline as per feedback */}
             <p className="text-gray-600 text-sm mb-8">
               123 Innovation Drive, Suite 100,<br />
               San Francisco, CA 94107
@@ -44,21 +42,43 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Home</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">About</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Contact</a></li>
-              {/* <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Blog</a></li> */}
+              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}>Home</a></li>
+              <li><a href="about-us" className="text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                // e.preventDefault();
+                // window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}>About</a></li>
+              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors"  onClick={(e) => {
+      // If not on home page, let the default navigation happen
+      if (window.location.pathname !== '/') {
+        return;
+      }
+      // If already on home page, handle smooth scroll
+      e.preventDefault();
+      const element = document.getElementById('services');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }}>Services</a></li>
+              <li><a href="contact" className="text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                // e.preventDefault();
+                // const element = document.getElementById('contact');
+                // if (element) {
+                //     element.scrollIntoView({ behavior: 'smooth' });
+                // }
+              }}>Contact</a></li>
             </ul>
           </div>
 
           {/* Services Links */}
           <div>
-            <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">GTM Services</h3>
+            <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Market Research</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Pitch Deck & Messaging</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Content Strategy</a></li>
+              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Product & Narrative Strategy</a></li>
+              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></li>
+              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Business Development</a></li>
             </ul>
           </div>
 
@@ -66,7 +86,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Contact us</h3>
             <ul className="space-y-2">
-              <li><a href="mailto:hello@gtmlabs.co" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">info@nunuconsulting.com</a></li>
+              <li><a href="mailto:marketing@nunuconsulting.com" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">marketing@nunuconsulting.com</a></li>
               <li><a href="tel:+14155551234" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a></li>
             </ul>
           </div>

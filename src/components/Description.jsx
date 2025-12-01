@@ -112,7 +112,7 @@ export default function Description() {
       </p>
 
       {/* Learn More Button - positioned at bottom right */}
-      <div className='mt-8 z-10 flex justify-start'>
+      {/* <div className='mt-8 z-10 flex justify-start'>
         <motion.button
           className='bg-black text-white px-8 py-4 font-medium hover:bg-gray-800 transition-colors shadow-[4px_4px_0px_0px_rgba(150,150,150,0.6)]'
           whileHover={{ scale: 1.02 }}
@@ -120,7 +120,7 @@ export default function Description() {
         >
           Learn More
         </motion.button>
-      </div>
+      </div> */}
 
       {/* Small dot decoration */}
       {index === 0 && (
@@ -144,18 +144,19 @@ export default function Description() {
         </h2> */}
         {/* Orange underline decoration */}
         <svg className='mx-auto mb-6' width="150" height="12" viewBox="0 0 150 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 6C30 2 50 10 75 6C100 2 120 10 145 6" stroke="#FF6B35" strokeWidth="2" strokeLinecap="round"/>
-          <path d="M5 9C30 5 50 13 75 9C100 5 120 13 145 9" stroke="#FFAB6E" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M5 6C30 2 50 10 75 6C100 2 120 10 145 6" stroke="#00FF94" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M5 9C30 5 50 13 75 9C100 5 120 13 145 9" stroke="#00FF94" strokeWidth="2" strokeLinecap="round"/>
         </svg>
-        <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+        {/* <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
           
 Excellence in every detail, crafted for your success. Enterprise Growth Strategies.
-        </p>
+        </p> */}
       </motion.div>
 
       {/* Services Grid - 3 cards with gap */}
-      <motion.div 
-        className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto'
+      <motion.section 
+        id="services"
+        className="relative py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -164,7 +165,7 @@ Excellence in every detail, crafted for your success. Enterprise Growth Strategi
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} index={index} />
         ))}
-      </motion.div>
+      </motion.section>
     </div>
   );
 }

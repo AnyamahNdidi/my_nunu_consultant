@@ -10,8 +10,8 @@ export default function Header() {
 
   const navItems = [
     { 
-      label: "Services", 
-      hasDropdown: true,
+      label: "Home", 
+      hasDropdown: false,
       href: "/",
       // dropdownItems: [
       //   { label: "Market Research", href: "/solutions/market-research" },
@@ -21,7 +21,7 @@ export default function Header() {
     },
     { 
       label: "About", 
-      hasDropdown: true,
+      hasDropdown: false,
       href: "/about-us",
       // dropdownItems: [
       //   { label: "Our Story", href: "/about/our-story" },
@@ -58,7 +58,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-center ">
             <nav className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <div
@@ -100,7 +100,7 @@ export default function Header() {
           <div className="flex-1 flex justify-end items-center gap-4">
             <a 
               href="/contact"
-              className="hidden md:block bg-[#00FF94] hover:bg-green-600 text-black font-semibold px-6 py-2 rounded-lg transition-colors"
+              className="hidden md:block bg-[#00FF94] hover:bg-green-600 text-black font-semibold px-4 py-2 rounded-lg transition-colors"
             >
               Book a Consultation
             </a>

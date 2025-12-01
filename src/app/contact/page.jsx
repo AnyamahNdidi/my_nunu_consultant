@@ -38,8 +38,9 @@ export default function ContactPage() {
   };
 
   const validatePhone = (phone) => {
+    if (!phone.trim()) return ''; // Phone is optional
     const re = /^[\d\s\-\+\(\)]+$/;
-    return phone.length >= 10 && re.test(phone);
+    return phone.length >= 10 && re.test(phone) ? '' : 'Please enter a valid phone number';
   };
 
   const validateField = (name, value) => {
@@ -51,9 +52,7 @@ export default function ContactPage() {
         if (!validateEmail(value)) return 'Please enter a valid email address';
         return '';
       case 'phone':
-        if (value.trim() === '') return 'Phone number is required';
-        if (!validatePhone(value)) return 'Please enter a valid phone number';
-        return '';
+        return validatePhone(value); // Phone is optional, only validate if provided
       default:
         return '';
     }
@@ -100,32 +99,51 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Mark all fields as touched to show errors
+    const newTouched = {
+      fullName: true,
+      email: true,
+      phone: true,
+      services: true,
+      message: true,
+      hearAbout: true
+    };
+    
     const newErrors = {
       fullName: validateField('fullName', formData.fullName),
       email: validateField('email', formData.email),
-      phone: validateField('phone', formData.phone)
+      phone: validateField('phone', formData.phone) // This will be empty string if phone is empty
     };
 
+    setTouched(newTouched);
     setErrors(newErrors);
-    setTouched({
-      fullName: true,
-      email: true,
-      phone: true
-    });
 
     const hasErrors = Object.values(newErrors).some(error => error !== '');
     if (hasErrors) return;
 
     setIsSubmitting(true);
-    setSubmitStatus(null);
+    setSubmitStatus('submitting');
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      console.log('Form submitted:', formData);
+      // Simulate API call
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Simulate random success/failure for demo
+          const isSuccess = Math.random() > 0.2; // 80% success rate for demo
+          if (isSuccess) {
+            console.log('Form submitted:', formData);
+            resolve();
+          } else {
+            reject(new Error('Failed to submit form. Please try again.'));
+          }
+        }, 1500);
+      });
 
       setSubmitStatus('success');
+      // Reset form on successful submission
       setFormData({
         fullName: '',
         phone: '',
@@ -136,8 +154,13 @@ export default function ContactPage() {
       });
       setTouched({});
       setErrors({});
+      
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+      
     } catch (error) {
-      setSubmitStatus('error');
+      console.error('Submission error:', error);
+      setSubmitStatus(error.message || 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -224,9 +247,10 @@ export default function ContactPage() {
                 </div>
 
                 {/* Phone */}
+                {/* Phone Number - Optional */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold mb-2 text-[#B0B0B0]">
-                    Phone Number*
+                    Phone Number <span className="text-gray-500 font-normal">(Optional)</span>
                   </label>
                   <input
                     type="tel"
@@ -238,6 +262,7 @@ export default function ContactPage() {
                     className={`w-full bg-[#1A1A1A] border ${errors.phone && touched.phone ? 'border-red-500' : 'border-gray-700'} rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00FF94] transition-colors`}
                     placeholder="+1 (555) 123-4567"
                   />
+                  <p className="text-xs text-gray-500 mt-1">For faster response times</p>
                   {errors.phone && touched.phone && (
                     <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
                   )}

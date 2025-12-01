@@ -5,6 +5,7 @@ import { Check, TrendingUp, Users, Sparkles, ArrowRight, Linkedin } from 'lucide
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ceoImage from "../../../public/images/ceo.jpg";
+import backgroundImg from "../../../public/images/betterImage.jpg"
 
 export default function AboutUs() {
   const container = useRef();
@@ -16,8 +17,8 @@ export default function AboutUs() {
   return (
     <>
       <main ref={container} className="relative h-[200vh]">
-        <Section1 scrollYProgress={scrollYProgress} />
-        <Section2 scrollYProgress={scrollYProgress} />
+        <Section1 />
+        <Section2 />
         <Section3 />
         <Footer />
       </main>
@@ -25,20 +26,14 @@ export default function AboutUs() {
   );
 }
 
-const Section1 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
-
+const Section1 = () => {
   return (
-    <motion.div
-      style={{ scale, rotate }}
-      className="sticky top-0 min-h-screen bg-[#0A0A0A] pt-60 relative overflow-hidden"
-    >
+    <div className="sticky top-0 min-h-screen bg-[#0A0A0A] pt-60 relative overflow-hidden">
       <div className="absolute inset-0">
         {/* Team image */}
-        <div className="absolute right-0 top-0 w-2/3 h-full">
+        <div className="absolute inset-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/data-center-admin-looking-maintenance-files-monitoring-system-performance.jpg-up6KRYL4lWTII3qgbkenfbIXGKVXbI.jpeg"
+            src={backgroundImg}
             alt="Team working in office"
             fill
             className="object-cover"
@@ -46,7 +41,7 @@ const Section1 = ({ scrollYProgress }) => {
         </div>
 
         {/* Black gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/70 to-[#0A0A0A]/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/90 to-[#0A0A0A]/60"></div>
       </div>
 
       <div className="relative z-10 min-h-3.5 flex flex-col justify-center">
@@ -106,13 +101,11 @@ const Section1 = ({ scrollYProgress }) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
-const Section2 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+const Section2 = () => {
 
   const edges = [
     {
@@ -133,23 +126,14 @@ const Section2 = ({ scrollYProgress }) => {
   ];
 
   return (
-    <motion.div
-      style={{ scale, rotate }}
-      className="relative h-screen bg-black text-white flex flex-col items-center justify-center px-6"
-    >
+    <div className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-6">
       <div className="max-w-6xl mx-auto w-full">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Built from the ground up<br />
-            <span className="text-[#FF6B35]">to be efficient for you.</span>
+            Our Edge<br />
+            {/* <span className="text-[#00FF94]">to be efficient for you.</span> */}
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {edges.map((edge, index) => (
@@ -173,7 +157,7 @@ const Section2 = ({ scrollYProgress }) => {
           ))}
         </div>
 
-        <motion.div
+        {/* <div
           className="text-center mt-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -183,28 +167,28 @@ const Section2 = ({ scrollYProgress }) => {
           <p className="text-gray-400 text-lg">
             Ready to transform your AI startup&apos;s go-to-market strategy?
           </p>
-        </motion.div>
+        </div> */}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Section3 = () => {
   return (
-    <div className="relative bg-white text-black py-20 px-6">
+    <div className="relative bg-[#F4F0E7] text-black py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-16 text-center"
+          className="text-3xl text-[#0A0A0A] md:text-4xl font-bold mb-16 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Our Founder
+          Meet Our Founder
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <motion.div
+          <div
             className="relative"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -220,27 +204,24 @@ const Section3 = () => {
                 className="object-cover w-full h-[600px]"
               />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-2">Tjimke</h3>
-            <p className="text-[#FF6B35] font-semibold text-lg mb-6 uppercase tracking-wide">
+            <h3 className="text-2xl md:text-3xl text-[#0A0A0A] font-bold mb-2">Tjimke</h3>
+            <p className="text-[#00FF94] font-semibold text-lg mb-6 uppercase tracking-wide">
               Founder &amp; Principal Consultant
             </p>
 
-            <p className="text-[#B0B0B0] leading-relaxed mb-6">
-              A trusted advisor to multiple early-stage AI founders, Tjimke has helped products at Google
-              and beyond find their market and scale. She started Nunu Consulting to bring that same clarity
-              and momentum to the next generation of AI startups—ensuring they launch fast, resonate deeply,
-              and grow sustainably.
+            <p className="text-gray-600 leading-relaxed mb-6">
+            A trusted advisor to multiple early-stage AI founders, Tjimke has helped products at Google and beyond find their market and scale. She started Nunu Consulting to bring that same clarity and momentum to the next generation of AI startups ensuring they launch fast, resonate deeply, and grow sustainably.
             </p>
 
-            <blockquote className="border-l-4 border-[#00FF94] pl-4 py-2 mb-6 italic text-[#B0B0B0]">
+            <blockquote className="border-l-4 border-[#00FF94] pl-4 py-2 mb-6 italic text-gray-600">
               Great technology becomes great products when the market understands the value.
             </blockquote>
 
@@ -255,7 +236,7 @@ const Section3 = () => {
               </div>
               <span className="font-medium">Connect on LinkedIn</span>
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

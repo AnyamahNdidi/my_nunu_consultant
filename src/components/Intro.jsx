@@ -62,7 +62,7 @@ export default function Intro() {
     ];
   
     return (
-      <div ref={container} className='h-[600px] overflow-hidden bg-[#0A0A0A] '>
+      <div id="about" ref={container} className='h-[600px] overflow-hidden bg-[#0A0A0A] '>
         <motion.div style={{y}} className='relative h-full  bg-[#0A0A0A] flex items-center justify-center'>
           {/* Floating Icons with Mouse Tracking - Behind content */}
           <div className='absolute inset-0 z-0'>
@@ -90,23 +90,38 @@ export default function Intro() {
 
           {/* Main Content */}
           <div className='text-center px-6 z-10 relative'>
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+            <motion.h1 
+              className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
               Your <span className='relative'>
                 <span className='relative z-10'>Strategy & GTM Partner</span>
                 <span className='absolute bottom-2 left-0 w-full h-2 bg-[#00FF94] opacity-30 -z-0'></span>
-              </span> <br/>for <span className='relative inline-block'>
+              </span> <span className='block h-2' />for <span className='relative inline-block'>
                 <span className='relative z-10'>AI-First</span>
-                {/* <svg className='absolute -inset-3 w-[calc(100%+1.5rem)] h-[calc(100%+1.5rem)] z-20 pointer-events-none' viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="100" cy="40" rx="110" ry="35" fill="none" stroke="#FF6B35" strokeWidth="2.5" strokeLinecap="round" opacity="0.9" transform="rotate(-3 100 40)" />
-                </svg> */}
               </span> Startups
-            </h1>
-            <p className='text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto'>
-            &ldquo;We shape your positioning, craft your story, and build GTM strategies that win customers, fast&rdquo;
-            </p>
-            <button className='bg-[#00FF94] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors'>
-              Book a Consultation
-            </button>
+            </motion.h1>
+            
+            <motion.p 
+              className='text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
+            >
+              We shape your positioning, craft your story, and build GTM strategies that win customers, fast
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            >
+              <button className='bg-[#00FF94] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 transition-colors'>
+                Book a Consultation
+              </button>
+            </motion.div>
           </div>
         </motion.div>
       </div>

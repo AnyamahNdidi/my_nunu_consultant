@@ -29,6 +29,7 @@ export default function Section() {
     return (
         <div
           ref={container} 
+          id="services"
           className='relative flex items-center justify-center h-screen overflow-hidden'
           style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
         >
@@ -56,14 +57,14 @@ export default function Section() {
 
           {/* Center Content - Green Card - MUST HAVE z-10 */}
           <motion.div 
-            className='relative z-10 bg-[#00FF94] rounded-3xl px-16 py-14 text-center max-w-5xl w-full min-h-[700px] mx-6 flex flex-col items-center justify-center'
+            className='relative z-10 bg-[#00FF94] rounded-3xl px-16 py-8 text-center max-w-3xl w-full min-h-[550px] mx-6 flex flex-col items-center justify-center'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <motion.h2 
-              className='text-3xl md:text-4xl font-bold text-black mb-4'
+              className='text-3xl md:text-4xl font-bold text-black mb-3'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -73,7 +74,7 @@ export default function Section() {
             </motion.h2>
 
             <motion.p 
-              className='text-black/80 mb-8 text-lg'
+              className='text-black/80 mb-2 text-lg'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -89,7 +90,7 @@ export default function Section() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className='bg-white/90 rounded-full px-4 py-6 flex items-center gap-2 shadow-lg'>
+              <div className='bg-white/90 rounded-full px-4 py-4 flex items-center gap-2 shadow-lg'>
                 <div className='flex items-center gap-1 pr-2 border-r border-gray-300'>
                   <span className='font-bold text-black'>5</span>
                   <Star className='w-4 h-4 fill-yellow-400 text-yellow-400' />
@@ -113,7 +114,7 @@ export default function Section() {
 
             <Link href="/contact">
               <motion.button 
-                className='bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors mb-4'
+                className='bg-black text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors mb-3'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
