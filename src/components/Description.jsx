@@ -75,7 +75,7 @@ export default function Description() {
     >
       {/* Orange hover background - only covers bottom portion with curved top */}
       <div 
-        className='absolute bottom-0 left-0 right-0 h-[60%] bg-[#FFAB6E] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out'
+        className='absolute inset-0 w-full h-full bg-[#00FF94] translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out'
         style={{ borderTopLeftRadius: '50% 15%', borderTopRightRadius: '50% 15%' }}
       ></div>
 
@@ -112,7 +112,7 @@ export default function Description() {
       </p>
 
       {/* Learn More Button - positioned at bottom right */}
-      <div className='mt-8 z-10 flex justify-end'>
+      <div className='mt-8 z-10 flex justify-start'>
         <motion.button
           className='bg-black text-white px-8 py-4 font-medium hover:bg-gray-800 transition-colors shadow-[4px_4px_0px_0px_rgba(150,150,150,0.6)]'
           whileHover={{ scale: 1.02 }}
@@ -139,9 +139,9 @@ export default function Description() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+        {/* <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
           Strategic Advisory <br />Services
-        </h2>
+        </h2> */}
         {/* Orange underline decoration */}
         <svg className='mx-auto mb-6' width="150" height="12" viewBox="0 0 150 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5 6C30 2 50 10 75 6C100 2 120 10 145 6" stroke="#FF6B35" strokeWidth="2" strokeLinecap="round"/>

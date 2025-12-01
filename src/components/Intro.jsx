@@ -96,9 +96,9 @@ export default function Intro() {
                 <span className='absolute bottom-2 left-0 w-full h-2 bg-[#00FF94] opacity-30 -z-0'></span>
               </span> <br/>for <span className='relative inline-block'>
                 <span className='relative z-10'>AI-First</span>
-                <svg className='absolute -inset-3 w-[calc(100%+1.5rem)] h-[calc(100%+1.5rem)] z-20 pointer-events-none' viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                {/* <svg className='absolute -inset-3 w-[calc(100%+1.5rem)] h-[calc(100%+1.5rem)] z-20 pointer-events-none' viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="100" cy="40" rx="110" ry="35" fill="none" stroke="#FF6B35" strokeWidth="2.5" strokeLinecap="round" opacity="0.9" transform="rotate(-3 100 40)" />
-                </svg>
+                </svg> */}
               </span> Startups
             </h1>
             <p className='text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto'>

@@ -23,7 +23,7 @@ export default function Home() {
     //   const LocomotiveScroll = (await import("locomotive-scroll")).default;
     //   const locomotiveScroll = new LocomotiveScroll();
     // })();
-  }, []);
+  }, []); 
 
   return (
     <main>
