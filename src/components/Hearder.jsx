@@ -29,16 +29,16 @@ export default function Header() {
       //   { label: "Careers", href: "/about/careers" },
       // ]
     },
-    { 
-      label: "Porfolio", 
-      hasDropdown: true,
-      href: "/learn",
-      // dropdownItems: [
-      //   { label: "Blog", href: "/learn/blog" },
-      //   { label: "Resources", href: "/learn/resources" },
-      //   { label: "Case Studies", href: "/learn/case-studies" },
-      // ]
-    },
+    // { 
+    //   label: "Porfolio", 
+    //   hasDropdown: true,
+    //   href: "/learn",
+    //   // dropdownItems: [
+    //   //   { label: "Blog", href: "/learn/blog" },
+    //   //   { label: "Resources", href: "/learn/resources" },
+    //   //   { label: "Case Studies", href: "/learn/case-studies" },
+    //   // ]
+    // },
     { label: "Contact", hasDropdown: false, href: "/contact" },
   ];
 
