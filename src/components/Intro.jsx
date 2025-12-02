@@ -41,7 +41,7 @@ export default function Intro() {
     // Floating animation variants
     const floatingVariants = {
       animate: (i) => ({
-        y: [0, -10, 0, 10, 0],
+        // y: [0, -10, 0, 10, 0],
         x: [0, 5, 0, -5, 0],
         rotate: [0, 3, 0, -3, 0],
         transition: {
@@ -69,18 +69,18 @@ export default function Intro() {
             {icons.map(({ Icon, scrollY, className, size, speed, custom }, index) => (
             <motion.div 
               key={index}
-              style={{ y: scrollY }}
+              // style={{ y: scrollY }}
               className={className}
             >
               <motion.div
-                variants={floatingVariants}
-                animate="animate"
-                custom={custom}
-                style={{
-                  x: mousePosition.x * speed,
-                  y: mousePosition.y * speed * 0.5
-                }}
-                transition={{ type: "spring", stiffness: 50, damping: 20 }}
+              //   variants={floatingVariants}
+              //   animate="animate"
+              //   custom={custom}
+              //   style={{
+              //     x: mousePosition.x * speed,
+              //     // y: mousePosition.y * speed * 0.5
+              //   }}
+              //  transition={{ duration: 0.3 }}
               >
                 <Icon className={`${size} text-white`} strokeWidth={1.5} />
               </motion.div>
@@ -118,7 +118,7 @@ export default function Intro() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             >
-              <button className='bg-[#00FF94] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 transition-colors'>
+              <button className='bg-[#00FF94] text-black px-6 py-2 rounded-lg text-lg font-normal hover:bg-green-400 transition-colors'>
                 Book A Consultation
               </button>
             </motion.div>

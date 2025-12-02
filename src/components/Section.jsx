@@ -114,7 +114,7 @@ export default function Section() {
 
             <Link href="/contact">
               <motion.button 
-                className='bg-black text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors mb-3'
+                className='bg-black text-white px-8 py-3 rounded-full font-normal text-lg hover:bg-gray-800 transition-colors mb-3'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

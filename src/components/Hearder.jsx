@@ -69,7 +69,7 @@ export default function Header() {
                 >
                   <a
                     href={item.href}
-                    className="flex items-center space-x-1 text-sm font-medium hover:text-[#00D17A] transition-colors duration-200 relative group"
+                    className="flex items-center space-x-1 text-sm font-normal hover:text-[#00D17A] transition-colors duration-200 relative group"
                   >
                     <span className="relative">
                       {item.label}
@@ -103,14 +103,14 @@ export default function Header() {
           <div className="flex justify-end items-center gap-6">
             <a 
               href="/contact"
-              className="hidden md:block bg-[#00FF94] hover:bg-green-600 text-black text-sm font-medium px-3 py-1.5 rounded transition-colors"
+              className="hidden md:block text-white hover:text-[#00FF94] text-sm font-normal px-3 py-1 border border-white/30 rounded hover:border-[#00FF94] transition-colors"
             >
               Book A Consultation
             </a>
             
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-white hover:text-[#00FF94] transition-colors"
+              className="md:hidden p-2 text-white hover:text-[#00FF94] font-normal transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -137,7 +137,7 @@ export default function Header() {
           {/* Mobile CTA Button */}
           <a 
             href="/contact"
-            className="block w-full mt-6 bg-[#00FF94] hover:bg-green-600 text-black font-medium px-4 py-2 rounded transition-colors text-center text-sm"
+            className="block w-full mt-6 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-[#00FF94] text-white font-normal px-4 py-2.5 rounded text-center text-xs transition-all duration-300"
             onClick={() => setMobileMenuOpen(false)}
           >
             Book a Consultation

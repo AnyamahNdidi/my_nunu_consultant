@@ -51,7 +51,7 @@ const Section1 = () => {
           <div className="flex">
             <a 
               href="/contact" 
-              className="group inline-flex items-center bg-[#00FF94] hover:bg-[#00D17A] text-[#0F3D3E] px-6 py-3 rounded-md font-semibold transition-colors duration-200"
+              className="group inline-flex items-center bg-[#00FF94] hover:bg-[#00D17A] text-[#0F3D3E] px-6 py-3 rounded-md font-normal transition-colors duration-200"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

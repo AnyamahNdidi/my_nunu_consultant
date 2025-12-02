@@ -4,7 +4,7 @@
 
   export default function Footer() {
     return (
-      <footer className="bg-[#F5F5F0] pt-6  px-8 md:px-16 lg:px-24">
+      <footer className="bg-[#F4F0E7] pt-6  px-8 md:px-16 lg:px-24">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -12,7 +12,7 @@
             {/* Logo & Company Info */}
             <div className="md:col-span-1 ">
               {/* Logo */}
-              <div className="flex items-center mb-3 -mt-4">
+              <div className="flex items-center mb-0 -mt-4">
                 <Logo color="#2D5A3D" width={100} height={75} />
               </div>
               {/* Removed tagline as per feedback */}
@@ -38,57 +38,58 @@
               </div>
             </div>
 
-            {/* Company Links */}
-            <div>
-              <h3 className="text-xs font-semibold text-[#2D5A3D] uppercase tracking-wider mb-3">Company</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}>Home</a></li>
-                <li><a href="about-us" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                  // e.preventDefault();
-                  // window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}>About</a></li>
-                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors"  onClick={(e) => {
-        // If not on home page, let the default navigation happen
-        if (window.location.pathname !== '/') {
-          return;
-        }
-        // If already on home page, handle smooth scroll
-        e.preventDefault();
-        const element = document.getElementById('services');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }}>Services</a></li>
-                <li><a href="contact" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                  // e.preventDefault();
-                  // const element = document.getElementById('contact');
-                  // if (element) {
-                  //     element.scrollIntoView({ behavior: 'smooth' });
-                  // }
-                }}>Contact</a></li>
-              </ul>
-            </div>
+            {/* Company and Services Links - Side by side on mobile */}
+            <div className="w-full flex flex-wrap">
+              {/* Company Links */}
+              <div className="w-1/2 md:w-auto md:pr-8">
+                <h3 className="text-xs font-bold text-[#2D5A3D] uppercase tracking-wider mb-3">Company</h3>
+                <div className="flex flex-col gap-1">
+                  <div className="leading-none"><a href="#" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}>Home</a></div>
+                  <div className="leading-none"><a href="about-us" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                    // e.preventDefault();
+                    // window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}>About</a></div>
+                  <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors"  onClick={(e) => {
+                    if (window.location.pathname !== '/') {
+                      return;
+                    }
+                    e.preventDefault();
+                    const element = document.getElementById('services');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}>Services</a></div>
+                  <div className="leading-none"><a href="contact" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                    // e.preventDefault();
+                    // const element = document.getElementById('contact');
+                    // if (element) {
+                    //     element.scrollIntoView({ behavior: 'smooth' });
+                    // }
+                  }}>Contact</a></div>
+                </div>
+              </div>
 
-            {/* Services Links */}
-            <div>
-              <h3 className="text-xs font-semibold text-[#2D5A3D] uppercase tracking-wider mb-3">Services</h3>
-              <ul className="space-y-2">
-                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors">Product & Narrative Strategy</a></li>
-                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></li>
-                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors">Business Development</a></li>
-              </ul>
+              {/* Services Links */}
+              <div className="w-1/2 md:w-auto md:pr-8">
+                <h3 className="text-xs font-bold text-[#2D5A3D] uppercase tracking-wider mb-3">Services</h3>
+                <div className="flex flex-col gap-1">
+                  <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors">Product & Narrative Strategy</a></div>
+                  <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></div>
+                  <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors">Business Development</a></div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-xs font-semibold text-[#2D5A3D] uppercase tracking-wider mb-3">Contact us</h3>
-              <ul className="space-y-2">
-                <li><a href="mailto:marketing@nunuconsulting.com" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">marketing@nunuconsulting.com</a></li>
-                <li><a href="tel:+14155551234" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a></li>
-              </ul>
+              <h3 className="text-xs font-bold text-[#2D5A3D] uppercase tracking-wider mb-3">Contact us</h3>
+              <div className="flex flex-col gap-1">
+                <div className="leading-none"><a href="mailto:marketing@nunuconsulting.com" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">marketing@nunuconsulting.com</a></div>
+                <div className="leading-none"><a href="tel:+14155551234" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a></div>
+              </div>
             </div>
           </div>
 
@@ -101,8 +102,8 @@
               Copyright 2025 © Nunu Consulting
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-500 text-xs font-semibold hover:text-[#2D5A3D] transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-500 text-xs font-semibold hover:text-[#2D5A3D] transition-colors">Terms of Service</a>
+              <a href="#" className="text-gray-500 text-xs font-normal hover:text-[#2D5A3D] transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-500 text-xs font-normal hover:text-[#2D5A3D] transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
