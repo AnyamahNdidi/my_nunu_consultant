@@ -38,42 +38,29 @@
               </div>
             </div>
 
-            {/* Company and Services Links - Side by side on mobile */}
-            <div className="w-full flex flex-wrap">
+            {/* Company and Services Links - Side by side on mobile, in a row on desktop */}
+            <div className="w-full flex flex-wrap md:flex-nowrap md:gap-12">
               {/* Company Links */}
-              <div className="w-1/2 md:w-auto md:pr-8">
+              <div className="w-1/2 md:w-auto">
                 <h3 className="text-xs font-bold text-[#2D5A3D] uppercase tracking-wider mb-3">Company</h3>
                 <div className="flex flex-col gap-1">
                   <div className="leading-none"><a href="#" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}>Home</a></div>
-                  <div className="leading-none"><a href="about-us" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                    // e.preventDefault();
-                    // window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}>About</a></div>
-                  <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors"  onClick={(e) => {
-                    if (window.location.pathname !== '/') {
-                      return;
-                    }
+                  <div className="leading-none"><a href="about-us" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors">About</a></div>
+                  <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                    if (window.location.pathname !== '/') return;
                     e.preventDefault();
                     const element = document.getElementById('services');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
                   }}>Services</a></div>
-                  <div className="leading-none"><a href="contact" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                    // e.preventDefault();
-                    // const element = document.getElementById('contact');
-                    // if (element) {
-                    //     element.scrollIntoView({ behavior: 'smooth' });
-                    // }
-                  }}>Contact</a></div>
+                  <div className="leading-none"><a href="contact" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors">Contact</a></div>
                 </div>
               </div>
 
               {/* Services Links */}
-              <div className="w-1/2 md:w-auto md:pr-8">
+              <div className="w-1/2 md:w-auto">
                 <h3 className="text-xs font-bold text-[#2D5A3D] uppercase tracking-wider mb-3">Services</h3>
                 <div className="flex flex-col gap-1">
                   <div className="leading-none"><a href="/#services" className="text-xs font-normal text-gray-600 hover:text-[#2D5A3D] transition-colors">Product & Narrative Strategy</a></div>
