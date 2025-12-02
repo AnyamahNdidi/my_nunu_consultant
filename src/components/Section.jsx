@@ -57,7 +57,7 @@ export default function Section() {
 
           {/* Center Content - Green Card - MUST HAVE z-10 */}
           <motion.div 
-            className='relative z-10 bg-[#00FF94] rounded-3xl px-16 py-8 text-center max-w-3xl w-full min-h-[550px] mx-6 flex flex-col items-center justify-center'
+            className='relative z-10 bg-[#00FF94] rounded-3xl px-16 py-8 text-center max-w-xl w-full min-h-[430px] mx-6 flex flex-col items-center justify-center'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

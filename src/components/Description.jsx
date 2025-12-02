@@ -70,27 +70,24 @@ export default function Description() {
   const ServiceCard = ({ service, index }) => (
     <motion.div
       variants={cardVariants}
-      className='relative p-10 flex flex-col h-[550px] bg-[#ffff] overflow-hidden group'
-      style={{ minHeight: '550px' }}
+      className='relative p-4 md:p-8 flex flex-col h-auto min-h-[530px] bg-white overflow-hidden group'
     >
-      {/* Orange hover background - only covers bottom portion with curved top */}
+      {/* Green accent at bottom - slides up on hover */}
       <div 
-        className='absolute inset-0 w-full h-full bg-[#00FF94] translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out'
-        style={{ borderTopLeftRadius: '50% 15%', borderTopRightRadius: '50% 15%' }}
+        className='absolute bottom-0 left-0 w-full h-0 group-hover:h-48 bg-[#00FF94] transition-all duration-500 ease-out'
+        style={{ 
+          borderTopLeftRadius: '50% 20%',
+          borderTopRightRadius: '50% 20%',
+          zIndex: 0
+        }}
       ></div>
 
-      {/* Green accent icon - lazy loaded */}
-      <motion.div 
-        className='mb-4 z-10'
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4, delay: index * 0.1 }}
-      >
+      {/* Service icon */}
+      <div className='relative z-10 mb-6'>
         <div className='w-12 h-12 bg-[#00FF94] rounded-lg flex items-center justify-center'>
           <service.icon className='w-6 h-6 text-black' strokeWidth={2} />
         </div>
-      </motion.div>
+      </div>
       {/* Decorative squiggle top right */}
       <div className='absolute top-6 right-6 text-gray-400 group-hover:text-white/60 transition-colors duration-300 z-10'>
         <Squiggle />
@@ -106,10 +103,12 @@ export default function Description() {
         </div>
       </div>
 
-      {/* Description */}
-      <p className='leading-relaxed flex-grow text-gray-600 group-hover:text-black/80 transition-colors duration-300 z-10'>
-        {service.description}
-      </p>
+      {/* Description with better spacing */}
+      <div className='relative z-10 flex-1 flex flex-col'>
+        <p className='text-gray-600 group-hover:text-black/80 transition-colors duration-300 leading-relaxed'>
+          {service.description}
+        </p>
+      </div>
 
       {/* Learn More Button - positioned at bottom right */}
       {/* <div className='mt-8 z-10 flex justify-start'>
@@ -121,16 +120,11 @@ export default function Description() {
           Learn More
         </motion.button>
       </div> */}
-
-      {/* Small dot decoration */}
-      {index === 0 && (
-        <div className='absolute bottom-4 left-4 w-2 h-2 bg-black rounded-full'></div>
-      )}
     </motion.div>
   );
 
   return (
-    <div className='py-20 px-6 md:px-12 lg:px-20 bg-[#FFF8F0]'>
+    <div className='py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#FFF8F0]'>
       {/* Section Header */}
       <motion.div 
         className='text-center mb-10'
@@ -156,7 +150,7 @@ Excellence in every detail, crafted for your success. Enterprise Growth Strategi
       {/* Services Grid - 3 cards with gap */}
       <motion.section 
         id="services"
-        className="relative py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto"
+        className="relative py-8 md:py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 sm:px-4 lg:px-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

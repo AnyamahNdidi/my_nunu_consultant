@@ -28,51 +28,39 @@ export default function AboutUs() {
 
 const Section1 = () => {
   return (
-    <div className="sticky top-0 min-h-screen bg-[#0A0A0A] pt-60 relative overflow-hidden">
-      <div className="absolute inset-0">
-        {/* Team image */}
-        <div className="absolute inset-0">
-          <Image
-            src={backgroundImg}
-            alt="Team working in office"
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        {/* Black gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/90 to-[#0A0A0A]/60"></div>
+    <div className="relative bg-[#0A0A0A] py-2 md:py-16">
+      <div className="absolute inset-0 bg-lime-600 z-0">
+        <div className="absolute inset-0 bg-gradient-to-l from-[#0A0A0A] to-[#0A0A0A]/90"></div>
       </div>
 
-      <div className="relative z-10 min-h-3.5 flex flex-col justify-center">
-        <div className="container mx-auto px-8 lg:px-16">
-          <div className="max-w-3xl">
-            {/* Headline */}
-            <h1 className="text-white text-3xl sm:text-xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8">
-              We don&apos;t just market AI,{" "}
-              <span className="italic">we make it matter.</span>
-              <br />
-            </h1>
+      <div className="relative z-10 container mx-auto px-6 md:px-8">
+        <div className="max-w-3xl lg:px-12 ">
+          {/* <div className="mb-4">
+            <span className="text-[#00FF94] font-medium">Your Search Ends Here.</span>
+          </div> */}
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            We don&apos;t just market AI,{' '}
+            <span className="text-[#00FF94] inline">we make it matter.</span>
+          </h1>
 
-            <p className="text-gray-300 text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl">
-              With deep expertise in AI marketing, cloud ecosystems, and founder-led storytelling, we help you launch fast, create visibility, and grow sustainably.
-            </p>
+          <p className="text-gray-300 text-lg mb-8 max-w-xl">
+            With deep expertise in AI marketing, cloud ecosystems, and founder-led storytelling, we help you launch fast, create visibility, and grow sustainably.
+          </p>
 
-            <button
-              size="lg"
-              className="group mb-16 relative overflow-hidden bg-[#00FF94] hover:bg-[#00D17A]/80 text-[#0F3D3E] px-8 py-4 text-lg font-semibold"
+          <div className="flex">
+            <a 
+              href="/contact" 
+              className="group inline-flex items-center bg-[#00FF94] hover:bg-[#00D17A] text-[#0F3D3E] px-6 py-3 rounded-md font-semibold transition-colors duration-200"
             >
-              <span className="relative z-10 flex items-center font-bold">
-                Contact Us
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-[#A0F0D0]/80 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </button>
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
 
         {/* Trusted by */}
-        <div className="container mx-auto px-8 lg:px-16 pb-16">
+        {/* <div className="container mx-auto px-8 lg:px-16 pb-16">
           <div className="max-w-4xl">
             <p className="text-gray-400 text-sm mb-8">Trusted and endorsed by</p>
 
@@ -99,7 +87,7 @@ const Section1 = () => {
               <div className="text-white font-bold text-xl italic">ellow.</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -126,7 +114,7 @@ const Section2 = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-6">
+    <div className="relative min-h-80 bg-black py-8 text-white flex flex-col items-center justify-center px-6">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -213,7 +201,7 @@ const Section3 = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl md:text-3xl text-[#0A0A0A] font-bold mb-2">Tjimke</h3>
-            <p className="text-[#00FF94] font-semibold text-lg mb-6 uppercase tracking-wide">
+            <p className="text-[#0A0A0A] font-semibold text-lg mb-6 uppercase tracking-wide">
               Founder &amp; Principal Consultant
             </p>
 

@@ -26,7 +26,7 @@ export default function Home() {
   }, []); 
 
   return (
-    <main>
+    <div>
       <Intro />
 
       <Description />
@@ -35,7 +35,7 @@ export default function Home() {
       <Section />
       {/* <div className="h-screen" ref={stickyElement}></div> */}
       <Footer />
-      <StickyCursor stickyElement={stickyElement}/>
-    </main>
+      {/* <StickyCursor stickyElement={stickyElement}/> */}
+    </div>
   );
 }

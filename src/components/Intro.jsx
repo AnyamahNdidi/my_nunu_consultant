@@ -119,7 +119,7 @@ export default function Intro() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             >
               <button className='bg-[#00FF94] text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 transition-colors'>
-                Book a Consultation
+                Book A Consultation
               </button>
             </motion.div>
           </div>

@@ -1,111 +1,111 @@
-import React from "react";
-import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
-import { Logo } from "./logo";
+  import React from "react";
+  import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+  import { Logo } from "./logo";
 
-export default function Footer() {
-  return (
-    <footer className="bg-[#F5F5F0] py-12 px-8 md:px-16 lg:px-24">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          
-          {/* Logo & Company Info */}
-          <div className="md:col-span-1 ">
-            {/* Logo */}
-            <div className="flex items-center mb-4 -mt-6">
-              <Logo color="#2D5A3D" width={120} height={90} />
-            </div>
-            {/* Removed tagline as per feedback */}
-            <p className="text-gray-600 text-sm mb-8">
-              123 Innovation Drive, Suite 100,<br />
-              San Francisco, CA 94107
-            </p>
+  export default function Footer() {
+    return (
+      <footer className="bg-[#F5F5F0] pt-6  px-8 md:px-16 lg:px-24">
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             
-            {/* Social Icons */}
-            <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-full bg-[#2D5A3D] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
-                <Facebook className="w-4 h-4 text-white" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-[#2D5A3D] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
-                <Instagram className="w-4 h-4 text-white" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-[#2D5A3D] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
-                <Linkedin className="w-4 h-4 text-white" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-[#2D5A3D] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
-                <Youtube className="w-4 h-4 text-white" />
-              </a>
+            {/* Logo & Company Info */}
+            <div className="md:col-span-1 ">
+              {/* Logo */}
+              <div className="flex items-center mb-3 -mt-4">
+                <Logo color="#2D5A3D" width={100} height={75} />
+              </div>
+              {/* Removed tagline as per feedback */}
+              <p className="font-semibold text-gray-600 text-xs mb-6">
+                123 Innovation Drive, Suite 100,<br />
+                San Francisco, CA 94107
+              </p>
+              
+              {/* Social Icons */}
+              <div className="flex gap-2">
+                <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
+                  <Facebook className="w-3.5 h-3.5 text-white" />
+                </a>
+                <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
+                  <Instagram className="w-3.5 h-3.5 text-white" />
+                </a>
+                <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
+                  <Linkedin className="w-3.5 h-3.5 text-white" />
+                </a>
+                <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
+                  <Youtube className="w-3.5 h-3.5 text-white" />
+                </a>
+              </div>
+            </div>
+
+            {/* Company Links */}
+            <div>
+              <h3 className="text-xs font-semibold text-[#2D5A3D] uppercase tracking-wider mb-3">Company</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}>Home</a></li>
+                <li><a href="about-us" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                  // e.preventDefault();
+                  // window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}>About</a></li>
+                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors"  onClick={(e) => {
+        // If not on home page, let the default navigation happen
+        if (window.location.pathname !== '/') {
+          return;
+        }
+        // If already on home page, handle smooth scroll
+        e.preventDefault();
+        const element = document.getElementById('services');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}>Services</a></li>
+                <li><a href="contact" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
+                  // e.preventDefault();
+                  // const element = document.getElementById('contact');
+                  // if (element) {
+                  //     element.scrollIntoView({ behavior: 'smooth' });
+                  // }
+                }}>Contact</a></li>
+              </ul>
+            </div>
+
+            {/* Services Links */}
+            <div>
+              <h3 className="text-xs font-semibold text-[#2D5A3D] uppercase tracking-wider mb-3">Services</h3>
+              <ul className="space-y-2">
+                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors">Product & Narrative Strategy</a></li>
+                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></li>
+                <li><a href="/#services" className="text-xs font-semibold text-gray-600 hover:text-[#2D5A3D] transition-colors">Business Development</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-xs font-semibold text-[#2D5A3D] uppercase tracking-wider mb-3">Contact us</h3>
+              <ul className="space-y-2">
+                <li><a href="mailto:marketing@nunuconsulting.com" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">marketing@nunuconsulting.com</a></li>
+                <li><a href="tel:+14155551234" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a></li>
+              </ul>
             </div>
           </div>
 
-          {/* Company Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}>Home</a></li>
-              <li><a href="about-us" className="text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                // e.preventDefault();
-                // window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}>About</a></li>
-              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors"  onClick={(e) => {
-      // If not on home page, let the default navigation happen
-      if (window.location.pathname !== '/') {
-        return;
-      }
-      // If already on home page, handle smooth scroll
-      e.preventDefault();
-      const element = document.getElementById('services');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }}>Services</a></li>
-              <li><a href="contact" className="text-gray-600 hover:text-[#2D5A3D] transition-colors" onClick={(e) => {
-                // e.preventDefault();
-                // const element = document.getElementById('contact');
-                // if (element) {
-                //     element.scrollIntoView({ behavior: 'smooth' });
-                // }
-              }}>Contact</a></li>
-            </ul>
-          </div>
+          {/* Divider */}
+          <div className="border-t border-gray-300"></div>
 
-          {/* Services Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Product & Narrative Strategy</a></li>
-              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Go-to-Market Strategy</a></li>
-              <li><a href="/#services" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">Business Development</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-sm font-semibold text-[#2D5A3D] uppercase tracking-wider mb-4">Contact us</h3>
-            <ul className="space-y-2">
-              <li><a href="mailto:marketing@nunuconsulting.com" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">marketing@nunuconsulting.com</a></li>
-              <li><a href="tel:+14155551234" className="text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a></li>
-            </ul>
+          {/* Copyright */}
+          <div className="pt-6 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-500 text-xs">
+              Copyright 2025 © Nunu Consulting
+            </p>
+            <div className="flex gap-6 mt-4 md:mt-0">
+              <a href="#" className="text-gray-500 text-xs font-semibold hover:text-[#2D5A3D] transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-500 text-xs font-semibold hover:text-[#2D5A3D] transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-gray-300"></div>
-
-        {/* Copyright */}
-        <div className="pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
-            Copyright 2025 © Nunu Consulting
-          </p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-500 text-sm hover:text-[#2D5A3D] transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 text-sm hover:text-[#2D5A3D] transition-colors">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+      </footer>
+    );
+  }

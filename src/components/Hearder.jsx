@@ -58,8 +58,8 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="flex-1 flex justify-center ">
-            <nav className="hidden md:flex items-center space-x-8">
+          <div className="">
+            <nav className="hidden md:flex items-center justify-end space-x-8 px-8">
               {navItems.map((item) => (
                 <div
                   key={item.label}
@@ -69,9 +69,12 @@ export default function Header() {
                 >
                   <a
                     href={item.href}
-                    className="flex items-center space-x-1 text-sm font-medium hover:text-[#00D17A] transition-colors duration-200"
+                    className="flex items-center space-x-1 text-sm font-medium hover:text-[#00D17A] transition-colors duration-200 relative group"
                   >
-                    <span>{item.label}</span>
+                    <span className="relative">
+                      {item.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                     {item.hasDropdown && (
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                     )}
@@ -97,12 +100,12 @@ export default function Header() {
           </div>
 
           {/* CTA Button - Desktop */}
-          <div className="flex-1 flex justify-end items-center gap-4">
+          <div className="flex justify-end items-center gap-6">
             <a 
               href="/contact"
-              className="hidden md:block bg-[#00FF94] hover:bg-green-600 text-black font-semibold px-4 py-2 rounded-lg transition-colors"
+              className="hidden md:block bg-[#00FF94] hover:bg-green-600 text-black text-sm font-medium px-3 py-1.5 rounded transition-colors"
             >
-              Book a Consultation
+              Book A Consultation
             </a>
             
             {/* Mobile Menu Button */}
@@ -123,7 +126,7 @@ export default function Header() {
             <div key={item.label} className="border-b border-gray-800 last:border-b-0">
               <a
                 href={item.href}
-                className="block py-4 font-medium text-lg text-white hover:text-[#00FF94] transition-colors"
+                className="block py-4 font-medium text-sm text-white hover:text-[#00FF94] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
@@ -134,7 +137,7 @@ export default function Header() {
           {/* Mobile CTA Button */}
           <a 
             href="/contact"
-            className="block w-full mt-6 bg-[#00FF94] hover:bg-green-600 text-black font-semibold px-6 py-4 rounded-lg transition-colors text-center text-lg"
+            className="block w-full mt-6 bg-[#00FF94] hover:bg-green-600 text-black font-medium px-4 py-2 rounded transition-colors text-center text-sm"
             onClick={() => setMobileMenuOpen(false)}
           >
             Book a Consultation
