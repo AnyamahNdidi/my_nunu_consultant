@@ -103,9 +103,9 @@ export default function Header() {
           <div className="flex justify-end items-center gap-6">
             <a 
               href="/contact"
-              className="hidden md:block text-white hover:text-[#00FF94] text-sm font-normal px-3 py-1 border border-white/30 rounded hover:border-[#00FF94] transition-colors"
+              className="hidden md:block text-white  border-2 bg-white/10 hover:bg-[#00FF94] hover:text-[#0A0A0A]  text-sm font-normal px-3 py-1 border- border-white/30 rounded hover:border-[#00FF94] transition-colors"
             >
-              Book A Consultation
+              let's talk
             </a>
             
             {/* Mobile Menu Button */}
@@ -137,10 +137,10 @@ export default function Header() {
           {/* Mobile CTA Button */}
           <a 
             href="/contact"
-            className="block w-full mt-6 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-[#00FF94] text-white font-normal px-4 py-2.5 rounded text-center text-xs transition-all duration-300"
+            className="block w-full mt-6 bg-white/5 hover:bg-white/10 border border-white/20 hover:bg-[#00FF94] hover:text-[#0A0A0A] text-white font-normal px-4 py-2.5 rounded text-center text-xs transition-all duration-300"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Book a Consultation
+            let's talk
           </a>
         </nav>
       </div>

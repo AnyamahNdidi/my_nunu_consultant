@@ -120,7 +120,7 @@ export default function Intro() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             >
               <Link href="/contact" className='inline-block'>
-                <button className='bg-[#00FF94] text-black px-6 py-2 rounded-lg text-lg font-normal hover:bg-green-400 transition-colors'>
+                <button className='bg-[#00FF94] text-black px-6 py-2 rounded-lg text-lg font-medium hover:bg-green-400 transition-colors'>
                   Book A Consultation
                 </button>
               </Link>
