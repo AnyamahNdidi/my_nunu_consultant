@@ -105,7 +105,7 @@ export default function Header() {
               href="/contact"
               className="hidden md:block text-white  border-2 bg-white/10 hover:bg-[#00FF94] hover:text-[#0A0A0A]  text-sm font-normal px-3 py-1 border- border-white/30 rounded hover:border-[#00FF94] transition-colors"
             >
-              let&apos;s talk
+              Let&apos;s Talk
             </a>
             
             {/* Mobile Menu Button */}

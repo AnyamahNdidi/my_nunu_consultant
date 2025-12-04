@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+       fontFamily: {
+      sans: ["var(--font-dm-sans)", "sans-serif"], // default
+  inter: ["var(--font-inter)", "sans-serif"],
+  archivo: ["var(--font-archivo)", "sans-serif"],
+  dmsans: ["var(--font-dm-sans)", "sans-serif"], // optional alias
+      },
+
       typography: {
         DEFAULT: {
           css: {
