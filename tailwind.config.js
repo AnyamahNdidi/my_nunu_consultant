@@ -9,12 +9,13 @@ module.exports = {
     extend: {
 
        fontFamily: {
-      sans: ["var(--font-dm-sans)", "sans-serif"], // default
-  inter: ["var(--font-inter)", "sans-serif"],
+     inter: ["var(--font-inter)", "sans-serif"],    
+  sans: ["var(--font-dm-sans)", "sans-serif"], // default
+  
   archivo: ["var(--font-archivo)", "sans-serif"],
-  dmsans: ["var(--font-dm-sans)", "sans-serif"], // optional alias
-      },
-
+  dmsans: ["var(--font-dm-sans)", "sans-serif"],
+  lobster: ["var(--font-lobster)", "cursive"],
+},
       typography: {
         DEFAULT: {
           css: {

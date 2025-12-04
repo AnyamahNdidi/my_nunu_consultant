@@ -4,11 +4,7 @@
 
 @layer base {
 
-   /* :root {
-    --font-inter: 'Inter', sans-serif;
-    --font-archivo: 'Archivo', sans-serif;
-    --font-dm-sans: 'DM Sans', sans-serif;
-  } */
+
   html {
     @apply text-[16px] md:text-[18px];
     -webkit-font-smoothing: antialiased;
@@ -16,15 +12,13 @@
   }
 
   body {
-   @apply font-sans text-gray-100 leading-relaxed;
-    /* font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  }
+  @apply font-archivo text-gray-100 leading-relaxed;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-     @apply font-bold text-white leading-tight tracking-tight;
-    /* font-family: var(--font-archivo), var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
-  }
+h1, h2, h3, h4, h5, h6 {
+  @apply font-archivo font-bold;
 
+}
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6;
   }
@@ -57,8 +51,5 @@
     @apply leading-relaxed;
   }
   
-  .dm-sans {
-    font-family: var(--font-dm-sans), var(--font-inter), -apple-system, sans-serif;
-  }
-  
+ 
 }

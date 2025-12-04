@@ -70,7 +70,7 @@ export default function Description() {
   const ServiceCard = ({ service, index }) => (
     <motion.div
       variants={cardVariants}
-      className='relative p-4 md:p-8 flex flex-col h-auto min-h-[530px] bg-white overflow-hidden group'
+      className='relative p-4 md:p-8 flex flex-col  font-sans h-auto min-h-[530px] bg-white overflow-hidden group'
     >
       {/* Green accent at bottom - slides up on hover */}
       <div 

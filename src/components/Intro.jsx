@@ -63,7 +63,7 @@ export default function Intro() {
     ];
   
     return (
-      <div id="about" ref={container} className='h-[600px] overflow-hidden bg-[#0A0A0A] '>
+      <div id="about" ref={container} className='h-[600px]  overflow-hidden bg-[#0A0A0A] '>
         <motion.div style={{y}} className='relative h-full  bg-[#0A0A0A] flex items-center justify-center'>
           {/* Floating Icons with Mouse Tracking - Behind content */}
           <div className='absolute inset-0 z-0'>
@@ -90,9 +90,9 @@ export default function Intro() {
           </div> 
 
           {/* Main Content */}
-          <div className='text-center px-6 z-10 relative'>
+          <div className='text-center font-sans px-6 z-10 relative'>
             <motion.h1 
-              className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'
+              className='text-5xl md:text-6xl font-bold  text-white mb-6 leading-tight'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
