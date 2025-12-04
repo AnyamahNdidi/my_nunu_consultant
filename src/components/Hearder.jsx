@@ -140,7 +140,7 @@ export default function Header() {
             className="block w-full mt-6 bg-white/5 hover:bg-white/10 border border-white/20 hover:bg-[#00FF94] hover:text-[#0A0A0A] text-white font-normal px-4 py-2.5 rounded text-center text-xs transition-all duration-300"
             onClick={() => setMobileMenuOpen(false)}
           >
-            let&apos;s talk
+            Let&apos;s Talk
           </a>
         </nav>
       </div>
