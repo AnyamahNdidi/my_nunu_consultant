@@ -63,7 +63,7 @@ export default function Intro() {
     ];
   
     return (
-      <div id="about" ref={container} className='h-[600px]  overflow-hidden bg-[#0A0A0A] '>
+      <div id="about" ref={container} className='h-[620px]  overflow-hidden bg-[#0A0A0A] '>
         <motion.div style={{y}} className='relative h-full  bg-[#0A0A0A] flex items-center justify-center'>
           {/* Floating Icons with Mouse Tracking - Behind content */}
           <div className='absolute inset-0 z-0'>

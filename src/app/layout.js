@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className={`${archivo.variable}`} >
+    <html lang="en"  className={`${dmSans.variable}`} >
       <body>
         {" "}
         <Header />
