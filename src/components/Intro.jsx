@@ -101,7 +101,7 @@ export default function Intro() {
                 <span className='relative z-10'>Strategy & GTM Partner</span>
                 <span className='absolute bottom-2 left-0 w-full h-2 bg-[#00FF94] opacity-30 -z-0'></span>
               </span> <span className='block h-2' />for <span className='relative inline-block'>
-                <span className='relative z-10'>AI-First</span>
+                {/* <span className='relative z-10'>AI-First</span> */}
               </span> Startups
             </motion.h1>
             

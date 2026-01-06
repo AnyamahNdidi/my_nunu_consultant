@@ -14,25 +14,25 @@ export default function Footer() {
             <div className="flex items-center mb-0 -mt-4">
               <Logo color="#2D5A3D" width={100} height={75} />
             </div>
-            <p className="font-semibold text-gray-600 text-xs mb-6">
-              123 Innovation Drive, Suite 100,<br />
-              San Francisco, CA 94107
-            </p>
+            {/* <p className="font-semibold text-gray-600 text-xs mb-6"> */}
+              {/* 123 Innovation Drive, Suite 100,<br />
+              San Francisco, CA 94107 */}
+            {/* </p> */}
             
             {/* Social Icons */}
             <div className="flex gap-2">
               <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
                 <Facebook className="w-3.5 h-3.5 text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
+              {/* <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
                 <Instagram className="w-3.5 h-3.5 text-white" />
-              </a>
+              </a> */}
               <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
                 <Linkedin className="w-3.5 h-3.5 text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
+              {/* <a href="#" className="w-8 h-8 rounded-full bg-[#00D17A] flex items-center justify-center hover:bg-[#1e3d29] transition-colors">
                 <Youtube className="w-3.5 h-3.5 text-white" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -86,10 +86,10 @@ export default function Footer() {
               <h3 className="text-xs font-bold text-[#2D5A3D] uppercase tracking-wider mb-3">Contact us</h3>
               <div className="flex flex-col gap-1">
                 <div className="leading-none">
-                  <a href="mailto:marketing@nunuconsulting.com" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">marketing@nunuconsulting.com</a>
+                  <a href="mailto:tjimke@nunuconsulting.com" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">tjimke@nunuconsulting.com</a>
                 </div>
                 <div className="leading-none">
-                  <a href="tel:+14155551234" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a>
+                  {/* <a href="tel:+14155551234" className="text-xs text-gray-600 hover:text-[#2D5A3D] transition-colors">(415) 555-1234</a> */}
                 </div>
               </div>
             </div>

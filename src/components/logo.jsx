@@ -25,8 +25,8 @@ export function Logo({
       </defs>
 
       {/* Background circle elements */}
-      <circle cx="30" cy="40" r="12" fill="url(#gradient1)" opacity="0.8" />
-      <circle cx="50" cy="40" r="12" fill="url(#gradient1)" opacity="0.6" />
+      <circle cx="30" cy="40" r="12" fill={logoColor} opacity="0.8" />
+      <circle cx="50" cy="40" r="12" fill={logoColor} opacity="0.6" />
 
       {/* Main company name */}
       <text

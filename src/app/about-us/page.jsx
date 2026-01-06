@@ -40,8 +40,8 @@ const Section1 = () => {
           </div> */}
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            We don&apos;t just market AI,{' '}
-            <span className="text-[#00FF94] inline">we make it matter.</span>
+            We don&apos;t just market startups,{' '}
+            <span className="text-[#00FF94] inline"> we make them matter.</span>
           </h1>
 
           <p className="text-gray-300 text-lg mb-8 max-w-xl">
