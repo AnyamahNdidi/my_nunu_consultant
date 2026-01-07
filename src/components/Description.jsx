@@ -6,7 +6,7 @@ export default function Description() {
   const services = [
     {
       title: "Product & Narrative Strategy",
-      description: "We blend product positioning with compelling AI-driven storytelling to clarify value, shape market perception, and inspire action. From feature framing to founder voice, we turn technical depth into narratives that win customers and partners.",
+      description: "We blend product positioning with compelling driven storytelling to clarify value, shape market perception, and inspire action. From feature framing to founder voice, we turn technical depth into narratives that win customers and partners.",
       icon: Target
     },
     {
@@ -16,7 +16,7 @@ export default function Description() {
     },
     {
       title: "Business Development",
-      description: "We help AI-driven companies scale by identifying strategic partners, opening market channels, and shaping growth plays, blending relationship-building with AI insights to accelerate adoption and revenue.",
+      description: "We help companies scale by identifying strategic partners, opening market channels, and shaping growth plays, blending relationship-building with insights to accelerate adoption and revenue.",
       icon: FileText
     }
   ];

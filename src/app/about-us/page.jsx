@@ -45,7 +45,7 @@ const Section1 = () => {
           </h1>
 
           <p className="text-gray-300 text-lg mb-8 max-w-xl">
-            With deep expertise in AI marketing, cloud ecosystems, and founder-led storytelling, we help you launch fast, create visibility, and grow sustainably.
+            With deep expertise in marketing, cloud ecosystems, and founder-led storytelling, we help you launch fast, create visibility, and grow sustainably.
           </p>
 
           <div className="flex">
@@ -98,7 +98,7 @@ const Section2 = () => {
   const edges = [
     {
       icon: Sparkles,
-      title: "Proven AI Expertise",
+      title: "Proven Expertise",
       description: "9+ years at Google leading product marketing across Google Cloud, YouTube Ads, and Google Ads."
     },
     {
@@ -206,7 +206,7 @@ const Section3 = () => {
             </p>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-            A trusted advisor to multiple early-stage AI founders, Tjimke has helped products at Google and beyond find their market and scale. She started Nunu Consulting to bring that same clarity and momentum to the next generation of AI startups ensuring they launch fast, resonate deeply, and grow sustainably.
+            A trusted advisor to multiple early-stage founders, Tjimke has helped products at Google and beyond find their market and scale. She started Nunu Consulting to bring that same clarity and momentum to the next generation of startups ensuring they launch fast, resonate deeply, and grow sustainably.
             </p>
 
             <blockquote className="border-l-4 border-[#00FF94] pl-4 py-2 mb-6 italic text-gray-600">

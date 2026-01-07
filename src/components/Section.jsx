@@ -80,7 +80,7 @@ export default function Section() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Book a consultation with us to take your AI startup from launch to traction.
+              Book a consultation with us to take your startup from launch to traction.
             </motion.p>
 
             <motion.div 

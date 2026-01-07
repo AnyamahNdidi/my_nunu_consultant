@@ -22,7 +22,7 @@ export default function ContactPage() {
   const serviceOptions = [
     'Product & Narrative Strategy',
     'Go-to-Market Strategy',
-    'AI Storytelling',
+    'Storytelling',
     'Other'
   ];
 
