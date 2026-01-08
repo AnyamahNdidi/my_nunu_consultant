@@ -181,7 +181,7 @@ export default function ContactPage() {
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Let&apos;s shape your<br />
-                <span className="text-[#00FF94] text-5xl">Your story together.</span>
+                <span className="text-[#00FF94] text-5xl">Story together.</span>
               </h1>
 
               <div className="space-y-6 text-[#B0B0B0] text-lg leading-relaxed">
